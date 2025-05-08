@@ -4,7 +4,7 @@ import Link from 'next/link';
 import dayjs from 'dayjs';
 import { Button } from "./ui/button";
 import DisplayTechIcons from './DisplayTechIcons';
-
+import { getRandomInterviewCover } from '@/lib/utils';
 
 // Define the types
 interface Feedback {
@@ -29,16 +29,6 @@ const cn = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
-const getRandomInterviewCover = () => {
-  const covers = [
-    "/covers/interview-cover-1.jpg",
-    "/covers/interview-cover-2.jpg",
-    "/covers/interview-cover-3.jpg",
-    "/covers/interview-cover-4.jpg",
-    "/covers/interview-cover-5.jpg",
-  ];
-  return covers[Math.floor(Math.random() * covers.length)];
-};
 
 // Mock function to simulate the server action
 const getFeedbackByInterviewId = async ({
@@ -141,7 +131,7 @@ const InterviewCard = async ({
           </p>
         </div>
         <div className="flex flex-row justify-between">
-          <DisplayTechStack techStack={techstack} />
+<DisplayTechIcons techStack={techstack} />         </div>
           <Button className="btn-primary">
             <Link
               href={
@@ -153,7 +143,7 @@ const InterviewCard = async ({
               {feedback ? "Check Feedback" : "View Interview"}
             </Link>
           </Button>
-        </div>
+        
       </div>
     </div>
   );
