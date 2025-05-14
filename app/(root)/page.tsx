@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { dummyInterviews } from "@/constants";
 import Image from 'next/image'
 import Link from "next/link";
-import InterviewCard from '@/components/interviewCard'; // Make sure to import InterviewCard with correct casing
+import InterviewCard from '@/components/interviewCard'; 
 
 const Page = () => {
   return (

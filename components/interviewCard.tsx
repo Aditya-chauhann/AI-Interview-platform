@@ -24,13 +24,11 @@ interface InterviewCardProps {
   createdAt: Date | string;
 }
 
-// Utility functions to match first version
 const cn = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 };
 
 
-// Mock function to simulate the server action
 const getFeedbackByInterviewId = async ({
   interviewId,
   userId,
@@ -38,7 +36,7 @@ const getFeedbackByInterviewId = async ({
   interviewId: string;
   userId: string;
 }): Promise<Feedback | null> => {
-  // This is a mock implementation - replace with actual data fetching
+  // This is a mock implementation 
   return null;
 };
 
